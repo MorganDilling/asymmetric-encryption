@@ -1,7 +1,7 @@
 {
-  "name": "ts-node-project-template",
+  "name": "asymmetric-encryption",
   "version": "1.0.0",
-  "description": "Template for TypeScript projects",
+  "description": "A simple example of asymmetric encryption using Node.js and TypeScript",
   "main": "src/index.ts",
   "scripts": {
     "dev": "ts-node-dev --files -r tsconfig-paths/register --exit-child src/index.ts",
