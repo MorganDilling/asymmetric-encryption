@@ -45,7 +45,7 @@ const main = async (): Promise<void> => {
         {
           type: 'text',
           name: 'publicKeyFile',
-          message: 'Enter file path for the public key',
+          message: `Enter file path for the public key (default: ${KEY_PATH}/public.key)`,
         },
         {
           type: 'text',
@@ -54,12 +54,15 @@ const main = async (): Promise<void> => {
         },
       ]);
 
-      if (!publicKeyFile || !plainText) {
+      if (!plainText) {
         console.log('Invalid input');
         return main();
       }
 
-      const publicKey = fs.readFileSync(publicKeyFile, 'utf8');
+      const publicKey = fs.readFileSync(
+        publicKeyFile || `${KEY_PATH}/public.key`,
+        'utf8'
+      );
 
       const encrypted = encrypt(plainText, publicKey);
 
@@ -72,7 +75,7 @@ const main = async (): Promise<void> => {
         {
           type: 'text',
           name: 'privateKeyFile',
-          message: 'Enter file path for the private key',
+          message: `Enter file path for the private key (default: ${KEY_PATH}/private.key)`,
         },
         {
           type: 'text',
@@ -81,12 +84,15 @@ const main = async (): Promise<void> => {
         },
       ]);
 
-      if (!privateKeyFile || !cipherText) {
+      if (!cipherText) {
         console.log('Invalid input');
         return main();
       }
 
-      const privateKey = fs.readFileSync(privateKeyFile, 'utf8');
+      const privateKey = fs.readFileSync(
+        privateKeyFile || `${KEY_PATH}/private.key`,
+        'utf8'
+      );
 
       const decrypted = decrypt(cipherText, privateKey);
 
