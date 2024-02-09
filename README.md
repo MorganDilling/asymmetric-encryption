@@ -29,7 +29,7 @@ This project is licensed under [MIT](/LICENSE)
 
 <b>👤 Morgan Dilling "MJD"</b>
 
-- 💻 [Website](https://morgandilling.com)
+- 💻 [Website](https://morgandilling.dev)
 - 🛠️ [GitHub](https://github.com/morgandilling)
 - 🐦 [Twitter](https://twitter.com/MJDRBLX)
 - 🎮 [Roblox](https://www.roblox.com/users/187221070/profile)
